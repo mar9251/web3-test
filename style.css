@@ -197,11 +197,11 @@ p {
 
 .certification-container {
     display: grid;
-    grid-template-columns: auto;
+    justify-items: center;
 }
 
 #certificate1 {
-    grid-column: 3 / 5;
+    grid-column: 1 / 3;
     border: 1px solid #F2C94C;
     border-radius: 15px;
     background-color: #101A32;
@@ -418,23 +418,125 @@ body.light-mode i {
 
 /* Media queries for mobile phones */
 @media screen and (min-width: 319px) and (max-width: 480px) {
-    body {
-        background-color: green;
+    .navigation-bar {
+        width: 100%;
     }
 
     .navigation-bar ul {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
     .navigation-bar ul li a {
-        flex-basis: 500px;
+        display: block;
+        padding: 10px;
+    }
+    
+    #home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 220px 0;
+        text-align: center;
     }
 
+    #myPhoto {
+        position: static;
+        height: 300px;
+        margin: 40px;
+    }
+
+    #home h1, #home h3 {
+        position: static;
+        margin: 10px 0;
+    }
+
+    #home h3 {
+        line-height: 2.0;
+    }
+
+    .information-box {
+        position: static;
+        margin-top: 0;
+        width: 90%;
+        flex-wrap: nowrap;
+    }
+
+    #viewCV-button {
+        margin-left: 0; 
+    }
+
+
+    #certificate1 {
+        width: 90%;
+        margin: 0;
+    }
+
+    .skill-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .certification-container {
+        justify-items: center;
+    }
+
+    #skill1, #skill4 {
+        margin-left: 0;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    #project1 {
+        margin-left: 5px;
+    }
+
+    #project-description {
+        margin-left: 20px;
+    }
+
+    .project-container > div {
+        width: 250px;
+    }
+
+    #contact-form {
+        padding: 15px;
+    }
+
+    #contact-form input, #contact-form form textarea {
+        padding: 10px;
+        width: 85%;
+    }
+
+    #form-button {
+        margin-left: 90px;
+    }
+
+    #responseMessage {
+        margin-left: 5px;
+    }
+}
+
+/* Media queries for tablets */
+@media screen and (min-width: 480px) and (max-width: 1200px) {
+    body {
+        background-color: yellow;
+    }
 }
 
 /* Media queries for desktops */
 @media screen and (min-width: 1601px) {
+    
     #myPhoto {
         margin-left: 1300px;
     }
@@ -465,7 +567,3 @@ body.light-mode i {
     }
 
 }
-
-/* Mobile: 319px - 480px
-Tablets: 481 - 1200px
-Laptops: 1201 - 1600px
